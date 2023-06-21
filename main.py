@@ -51,4 +51,24 @@ res_choice = StringVar()
 en_res = Entry(root, font=('', 12), justify='center', textvariable=res_choice)
 en_res.place(x=380, y=445, width=40, height=25)
 
+#setting download button
+btn_download = Button(
+    root, text='Download', 
+    font=('', 12, 'bold'), 
+    bg='blue', 
+    fg='white', 
+    activebackground='#158F18', 
+    activeforeground='#ffffff',
+    relief='flat',
+    command=download_video
+)
+btn_download.place(x=200, y=550, width=200, height=40)
+
+Label(root, text='Downloading', bg=bg_color).place(x=70, y=500)
+progress_bar = ttk.Progressbar(root, orient=HORIZONTAL, length=375, maximum=100, value=0)
+progress_bar.place(x=150, y=500)
+
+lbl = Label(root, text="Akash Gaur", font=("Harlow Solid Italic", 10), bg='#D7D7D7').place(x=520, y=620)
+
+root.mainloop()
 
