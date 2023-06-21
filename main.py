@@ -6,6 +6,15 @@ from pytube import YouTube
 
 bg_color = "#D7D7D7"
 
+#functons
+def select_path():
+    path = filedialog.askdirectory()
+    if path=='':
+        lbl_path.config(text='No Path Selected', font=("Bahnschrift", 11))
+    else:
+        lbl_path.config(text=path, font=("Bahnschrift", 11))
+
+
 root = Tk()
 root.title("YouTube Video Downloader")
 root.geometry("600x650+500+50")
