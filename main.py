@@ -32,3 +32,23 @@ en_link.place(x=122, y=250, width=400, height=30)
 #setting download path
 lbl_path = Label(root, text='Please Select Download Path', font=('Bahnschrift', 12), bg=bg_color)
 lbl_path.place(x=100, y=320)
+
+btn_path = Button(root, text='Select Path', font=('', 12, 'bold'), bg="#404CEC", fg="white", relief='groove', command=select_path)
+btn_path.place(x=400, y=318, height=30)
+
+#setting resolution selection
+lbl_res = [Label]*4
+list = ['144p', '360p', '480p', '720p']
+X = 120
+for i in range(4):
+    lbl_res[i] = Label(root, text=str(i)+' - '+list[i], font=('', 10),)
+    lbl_res[i].place(x=X, y=390)
+    X+=100
+
+Label(root, text='Enter Resolution Choice: ', font=('', 12), bg=bg_color).place(x=180, y=445)
+
+res_choice = StringVar()
+en_res = Entry(root, font=('', 12), justify='center', textvariable=res_choice)
+en_res.place(x=380, y=445, width=40, height=25)
+
+
