@@ -21,11 +21,10 @@ def download_video():
         Link = str(link.get())
         user_path = lbl_path.cget('text')
         strm = int(res_choice.get())
-
+        
         url = YouTube(Link)
         video = url.streams
         video[strm].download(user_path)
-
 
         messagebox.showinfo('Download', 'Video Downloaded Successfully')
         res_choice.set('')
@@ -42,7 +41,7 @@ def download_video():
 
 root = Tk()
 root.title("YouTube Video Downloader")
-root.geometry("600x650+500+50")
+root.geometry("600x620+500+50")
 root.iconbitmap("logo.ico")
 root.resizable(0,0)
 root.config(bg=bg_color)
@@ -96,13 +95,9 @@ btn_download = Button(
     relief='flat',
     command=download_video
 )
-btn_download.place(x=200, y=550, width=200, height=40)
+btn_download.place(x=200, y=525, width=200, height=40)
 
-Label(root, text='Downloading', bg=bg_color).place(x=70, y=500)
-progress_bar = ttk.Progressbar(root, orient=HORIZONTAL, length=375, maximum=100, value=0)
-progress_bar.place(x=150, y=500)
-
-lbl = Label(root, text="Akash Gaur", font=("Harlow Solid Italic", 10), bg='#D7D7D7').place(x=520, y=620)
+lbl = Label(root, text="Akash Gaur", font=("Harlow Solid Italic", 10), bg='#D7D7D7').place(x=520, y=595)
 
 root.mainloop()
 
