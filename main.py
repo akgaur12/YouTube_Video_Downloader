@@ -14,6 +14,31 @@ def select_path():
     else:
         lbl_path.config(text=path, font=("Bahnschrift", 11))
 
+def download_video():
+    global link, res_choice, lbl_path
+
+    try:
+        Link = str(link.get())
+        user_path = lbl_path.cget('text')
+        strm = int(res_choice.get())
+
+        url = YouTube(Link)
+        video = url.streams
+        video[strm].download(user_path)
+
+
+        messagebox.showinfo('Download', 'Video Downloaded Successfully')
+        res_choice.set('')
+        link.set('')
+
+    except ValueError:
+        messagebox.showwarning('Download', 'Please Paste Link and Select Resolution')
+    except pytube.exceptions.RegexMatchError:
+        messagebox.showwarning('Download', 'Invalid Video URL')
+    except:
+        messagebox.showwarning('Download', 'Check your Internet Connection')
+        
+
 
 root = Tk()
 root.title("YouTube Video Downloader")
