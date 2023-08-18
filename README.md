@@ -4,10 +4,10 @@ Python GUI YouTube Video Downloader is a project that simplifies the process of 
 
 ## Features
 
-- User-friendly GUI: Provides an intuitive graphical interface for users to easily interact with and use the application.
-- YouTube video download: Allows users to enter the URL of the YouTube video they want to download.
-- Quality options: Provides options to select the desired video quality for downloading.
-- Save location: Allows users to choose the destination folder where downloaded videos will be saved.
+- **User-friendly GUI:** Provides an intuitive graphical interface for users to easily interact with and use the application.
+- **YouTube video download:** Allows users to enter the URL of the YouTube video they want to download.
+- **Quality options:** Provides options to select the desired video quality for downloading.
+- **Save location:** Allows users to choose the destination folder where downloaded videos will be saved.
 
 ## Project GUI Images
 
