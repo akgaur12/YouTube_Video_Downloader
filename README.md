@@ -22,10 +22,7 @@ Python GUI YouTube Video Downloader is a project that simplifies the process of 
 3. Run the Python script to launch the GUI application.
 4. Enter the URL of the YouTube video you want to download and select the desired video quality.
 5. Choose the destination folder and click the "Download" button to initiate the download.
-
-## Usage
-
-This project serves as a convenient tool for users to easily download YouTube videos without the need for complex commands or external software. Customize and enhance the application as needed to match your preferences and requirements.
+6. 
 
 ## License
 
